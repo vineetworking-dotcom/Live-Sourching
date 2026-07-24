@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | Live Sourcing</title>
-<meta name="description" content="Get in touch with Live Sourcing to enquire about garment sourcing, manufacturing, and wholesale orders.">
+<meta name="description" content="Get in touch with Live Sourcing to enquire about garment sourcing, manufacturing, and wholesale orders. Office in Noida, India.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -21,11 +21,6 @@
           <li><a class="primary-nav__link" href="about.html">About Us</a></li>
           <li><a class="primary-nav__link" href="services.html">Services</a></li>
           <li><a class="primary-nav__link" href="products.html">Products</a></li>
-          <li><a class="primary-nav__link" href="mens.html">Mens Wear</a></li>
-          <li><a class="primary-nav__link" href="womens.html">Womens Wear</a></li>
-          <li><a class="primary-nav__link" href="kids.html">Kids Wear</a></li>
-          <li><a class="primary-nav__link" href="accessories.html">Accessories &amp; Bag</a></li>
-          <li><a class="primary-nav__link" href="office.html">Office</a></li>
           <li><a class="primary-nav__link" href="contact.html" aria-current="page">Contact Us</a></li>
         </ul>
       </nav>
@@ -43,7 +38,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-reveal>
     <div class="container">
       <div class="grid--2" style="display:grid;gap:var(--space-6);align-items:start;">
         <form class="enquiry-form" novalidate>
@@ -68,23 +63,33 @@
           </div>
           <div class="field">
             <label for="message">Requirement details</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" maxlength="500" required></textarea>
             <p class="hint">Include product type, quantity, and target price if known.</p>
+            <p class="char-count">0 / 500</p>
             <p class="error-msg" role="alert">Tell us a bit about your requirement.</p>
           </div>
           <button class="btn btn--primary" type="submit">Send enquiry</button>
           <p class="form-success" role="status" tabindex="-1" hidden style="margin-top:var(--space-3);color:var(--color-border-default);font-weight:var(--font-weight-semibold);">Thanks &mdash; your enquiry has been sent. We&rsquo;ll be in touch within one business day.</p>
         </form>
-        <div class="card">
-          <div class="card__body">
-            <h3 class="card__title">Reach us directly</h3>
-            <p class="card__desc">
-              LIVE SOURCING<br>A-61, Sector 83, Noida &ndash; 201305, India<br><br>
-              <a href="tel:+919873277304">+91 98732 77304</a><br>
-              <a href="tel:+919810870135">+91 98108 70135</a><br>
-              <a href="mailto:info@livesourcing.in">info@livesourcing.in</a><br><br>
-              Monday &ndash; Friday, 9:00 AM &ndash; 5:30 PM
-            </p>
+        <div>
+          <div class="card">
+            <div class="card__body">
+              <h3 class="card__title">Office</h3>
+              <p class="card__desc">
+                LIVE SOURCING<br>A-61, Sector 83<br>Noida &ndash; 201305, India
+              </p>
+            </div>
+          </div>
+          <div class="card" style="margin-top:var(--space-4);">
+            <div class="card__body">
+              <h3 class="card__title">Reach us directly</h3>
+              <p class="card__desc">
+                <a href="tel:+919873277304">+91 98732 77304</a><br>
+                <a href="tel:+919810870135">+91 98108 70135</a><br>
+                <a href="mailto:info@livesourcing.in">info@livesourcing.in</a><br><br>
+                Monday &ndash; Friday, 9:00 AM &ndash; 5:30 PM
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -96,28 +101,28 @@
     <div class="container footer-grid">
       <div>
         <h4>Live Sourcing</h4>
-        <p>A quality fashion supplier specializing in design, development, production, and delivery within India — connecting global buyers with garment factories across Delhi&nbsp;NCR, Jaipur, and Mumbai.</p>
+        <p>A quality fashion supplier specializing in design, development, production, and delivery within India &mdash; connecting global buyers with garment factories across Delhi&nbsp;NCR, Jaipur, and Mumbai.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="office.html">Office</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div>
         <h4>Products</h4>
         <ul>
-          <li><a href="womens.html">Womens Wear</a></li>
-          <li><a href="mens.html">Mens Wear</a></li>
-          <li><a href="kids.html">Kids Wear</a></li>
-          <li><a href="accessories.html">Bags &amp; Accessories</a></li>
+          <li><a href="products.html#womens">Womens Wear</a></li>
+          <li><a href="products.html#mens">Mens Wear</a></li>
+          <li><a href="products.html#kids">Kids Wear</a></li>
+          <li><a href="products.html#accessories">Bags &amp; Accessories</a></li>
         </ul>
       </div>
       <div>
-        <h4>Office Address</h4>
+        <h4>Office</h4>
         <p>Live Sourcing<br>A-61, Sector 83<br>Noida &ndash; 201305, India</p>
         <p><a href="tel:+919873277304">+91 98732 77304</a><br><a href="tel:+919810870135">+91 98108 70135</a></p>
         <p><a href="mailto:info@livesourcing.in">info@livesourcing.in</a></p>
@@ -129,6 +134,7 @@
       <span>Designed &amp; developed by TapForTech.</span>
     </div>
   </footer>
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
 
 <script src="script.js"></script>
 </body>
