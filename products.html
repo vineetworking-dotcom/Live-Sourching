@@ -21,11 +21,6 @@
           <li><a class="primary-nav__link" href="about.html">About Us</a></li>
           <li><a class="primary-nav__link" href="services.html">Services</a></li>
           <li><a class="primary-nav__link" href="products.html" aria-current="page">Products</a></li>
-          <li><a class="primary-nav__link" href="mens.html">Mens Wear</a></li>
-          <li><a class="primary-nav__link" href="womens.html">Womens Wear</a></li>
-          <li><a class="primary-nav__link" href="kids.html">Kids Wear</a></li>
-          <li><a class="primary-nav__link" href="accessories.html">Accessories &amp; Bag</a></li>
-          <li><a class="primary-nav__link" href="office.html">Office</a></li>
           <li><a class="primary-nav__link" href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
@@ -39,45 +34,102 @@
     <div class="container">
       <p class="breadcrumb"><a href="index.html">Home</a> / Products</p>
       <h1>Products</h1>
-      <p>Four core categories, sourced and manufactured across our India network.</p>
+      <p>Four core categories, sourced and manufactured across our India network. Switch tabs or search within a category to narrow results.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-reveal>
     <div class="container">
-      <div class="grid">
-        <a class="card" href="womens.html">
-          <div class="card__media"></div>
-          <div class="card__body">
-            <h3 class="card__title">Womens Wear</h3>
-            <p class="card__desc">Exclusive, high-quality styles updated seasonally.</p>
-            <span class="card__link">View category</span>
-          </div>
-        </a>
-        <a class="card" href="mens.html">
-          <div class="card__media"></div>
-          <div class="card__body">
-            <h3 class="card__title">Mens Wear</h3>
-            <p class="card__desc">Trending styles at competitive wholesale prices.</p>
-            <span class="card__link">View category</span>
-          </div>
-        </a>
-        <a class="card" href="kids.html">
-          <div class="card__media"></div>
-          <div class="card__body">
-            <h3 class="card__title">Kids Wear</h3>
-            <p class="card__desc">Durable, comfortable everyday and occasion wear.</p>
-            <span class="card__link">View category</span>
-          </div>
-        </a>
-        <a class="card" href="accessories.html">
-          <div class="card__media"></div>
-          <div class="card__body">
-            <h3 class="card__title">Bags &amp; Accessories</h3>
-            <p class="card__desc">Fashion accessories to complete any collection.</p>
-            <span class="card__link">View category</span>
-          </div>
-        </a>
+      <div data-tabs role="tablist" aria-label="Product categories" class="tabs__list">
+        <button class="tabs__tab" role="tab" id="tab-womens" aria-controls="panel-womens" data-tab-hash="womens">Womens Wear</button>
+        <button class="tabs__tab" role="tab" id="tab-mens" aria-controls="panel-mens" data-tab-hash="mens">Mens Wear</button>
+        <button class="tabs__tab" role="tab" id="tab-kids" aria-controls="panel-kids" data-tab-hash="kids">Kids Wear</button>
+        <button class="tabs__tab" role="tab" id="tab-accessories" aria-controls="panel-accessories" data-tab-hash="accessories">Bags &amp; Accessories</button>
+      </div>
+
+      <div class="tabs__panel" id="panel-womens" role="tabpanel" aria-labelledby="tab-womens">
+        <p style="color:var(--color-text-muted);max-width:60ch;">Discover exclusive, high-quality women&rsquo;s wear through Live Sourcing.</p>
+        
+      <div class="filter-bar">
+        <label class="visually-hidden" for="search-womens">Search styles in womens</label>
+        <input type="search" id="search-womens" placeholder="Search styles by name&hellip;" data-filter-input="#grid-womens" data-filter-count="#count-womens">
+        <span class="filter-count" id="count-womens">4 styles</span>
+      </div>
+      <div class="grid" id="grid-womens">
+        <article class="card" data-filter-item="Style 01"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 01</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 02"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 02</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 03"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 03</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 04"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 04</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+      </div>
+      <div class="empty-state" style="display:none;" data-empty-example>
+        <h3>No styles match your search</h3>
+        <p>Try a different term, or send us your requirement directly.</p>
+        <a class="btn btn--primary" href="contact.html" style="margin-top:var(--space-3);">Enquire Now</a>
+      </div>
+
+      </div>
+      <div class="tabs__panel" id="panel-mens" role="tabpanel" aria-labelledby="tab-mens" hidden>
+        <p style="color:var(--color-text-muted);max-width:60ch;">Trending men&rsquo;s wear at competitive wholesale prices, keeping your store ahead of trends.</p>
+        
+      <div class="filter-bar">
+        <label class="visually-hidden" for="search-mens">Search styles in mens</label>
+        <input type="search" id="search-mens" placeholder="Search styles by name&hellip;" data-filter-input="#grid-mens" data-filter-count="#count-mens">
+        <span class="filter-count" id="count-mens">4 styles</span>
+      </div>
+      <div class="grid" id="grid-mens">
+        <article class="card" data-filter-item="Style 01"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 01</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 02"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 02</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 03"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 03</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 04"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 04</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+      </div>
+      <div class="empty-state" style="display:none;" data-empty-example>
+        <h3>No styles match your search</h3>
+        <p>Try a different term, or send us your requirement directly.</p>
+        <a class="btn btn--primary" href="contact.html" style="margin-top:var(--space-3);">Enquire Now</a>
+      </div>
+
+      </div>
+      <div class="tabs__panel" id="panel-kids" role="tabpanel" aria-labelledby="tab-kids" hidden>
+        <p style="color:var(--color-text-muted);max-width:60ch;">Durable, comfortable kids&rsquo; wear sourced across our India manufacturing network.</p>
+        
+      <div class="filter-bar">
+        <label class="visually-hidden" for="search-kids">Search styles in kids</label>
+        <input type="search" id="search-kids" placeholder="Search styles by name&hellip;" data-filter-input="#grid-kids" data-filter-count="#count-kids">
+        <span class="filter-count" id="count-kids">4 styles</span>
+      </div>
+      <div class="grid" id="grid-kids">
+        <article class="card" data-filter-item="Style 01"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 01</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 02"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 02</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 03"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 03</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 04"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 04</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+      </div>
+      <div class="empty-state" style="display:none;" data-empty-example>
+        <h3>No styles match your search</h3>
+        <p>Try a different term, or send us your requirement directly.</p>
+        <a class="btn btn--primary" href="contact.html" style="margin-top:var(--space-3);">Enquire Now</a>
+      </div>
+
+      </div>
+      <div class="tabs__panel" id="panel-accessories" role="tabpanel" aria-labelledby="tab-accessories" hidden>
+        <p style="color:var(--color-text-muted);max-width:60ch;">Fashion bags and accessories to complete any wholesale collection.</p>
+        
+      <div class="filter-bar">
+        <label class="visually-hidden" for="search-accessories">Search styles in accessories</label>
+        <input type="search" id="search-accessories" placeholder="Search styles by name&hellip;" data-filter-input="#grid-accessories" data-filter-count="#count-accessories">
+        <span class="filter-count" id="count-accessories">4 styles</span>
+      </div>
+      <div class="grid" id="grid-accessories">
+        <article class="card" data-filter-item="Style 01"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 01</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 02"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 02</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 03"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 03</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+        <article class="card" data-filter-item="Style 04"><div class="card__media"></div><div class="card__body"><h3 class="card__title">Style 04</h3><p class="card__desc">Available for wholesale enquiry.</p><a class="card__link" href="contact.html">Enquire</a></div></article>
+      </div>
+      <div class="empty-state" style="display:none;" data-empty-example>
+        <h3>No styles match your search</h3>
+        <p>Try a different term, or send us your requirement directly.</p>
+        <a class="btn btn--primary" href="contact.html" style="margin-top:var(--space-3);">Enquire Now</a>
+      </div>
+
       </div>
     </div>
   </section>
@@ -87,28 +139,28 @@
     <div class="container footer-grid">
       <div>
         <h4>Live Sourcing</h4>
-        <p>A quality fashion supplier specializing in design, development, production, and delivery within India — connecting global buyers with garment factories across Delhi&nbsp;NCR, Jaipur, and Mumbai.</p>
+        <p>A quality fashion supplier specializing in design, development, production, and delivery within India &mdash; connecting global buyers with garment factories across Delhi&nbsp;NCR, Jaipur, and Mumbai.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="office.html">Office</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div>
         <h4>Products</h4>
         <ul>
-          <li><a href="womens.html">Womens Wear</a></li>
-          <li><a href="mens.html">Mens Wear</a></li>
-          <li><a href="kids.html">Kids Wear</a></li>
-          <li><a href="accessories.html">Bags &amp; Accessories</a></li>
+          <li><a href="products.html#womens">Womens Wear</a></li>
+          <li><a href="products.html#mens">Mens Wear</a></li>
+          <li><a href="products.html#kids">Kids Wear</a></li>
+          <li><a href="products.html#accessories">Bags &amp; Accessories</a></li>
         </ul>
       </div>
       <div>
-        <h4>Office Address</h4>
+        <h4>Office</h4>
         <p>Live Sourcing<br>A-61, Sector 83<br>Noida &ndash; 201305, India</p>
         <p><a href="tel:+919873277304">+91 98732 77304</a><br><a href="tel:+919810870135">+91 98108 70135</a></p>
         <p><a href="mailto:info@livesourcing.in">info@livesourcing.in</a></p>
@@ -120,6 +172,7 @@
       <span>Designed &amp; developed by TapForTech.</span>
     </div>
   </footer>
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
 
 <script src="script.js"></script>
 </body>
